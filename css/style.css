@@ -1,0 +1,98 @@
+* { margin: 0; padding: 0; 
+	-webkit-font-smoothing: subpixel-antialiased !important;
+}
+html { overflow-y: scroll; 
+	}
+
+body { font: 18px/1.4 Kreon, sans-serif; 
+	background: #2B638A;
+	 margin : 50px;
+	  text-align:center;
+	}
+.group:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+.group { display: inline-block; clear: both; }
+.group { height: 1%; } .group { display: block; } 
+a:focus { outline: 0; }
+
+
+#gallery {
+	height:650px;
+	width:650px;
+	}
+
+img[class="floating"]{ float:right;
+	margin: 0px 0px 0px 10px;
+	}
+	
+
+#page-wrap { 
+	height: auto;
+	text-align:justify;
+    width: 700px; margin: 40px auto 5px; background: #FCFFF5; 
+    padding: 8px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#ccc));
+	background: -moz-linear-gradient(top,  #eee,  #ccc);
+	border-radius: 16px;
+	-webkit-border-radius: 16px;
+	
+}
+
+#main{ padding: 4px;
+	margin: 15px 10px 15px 10px;  
+}
+
+div[id="work"] li {
+    list-style-position: inside;
+}
+
+div[id="work"] b {
+	font: bold 25px Kreon, Sans-serif;
+	}
+
+
+
+p {
+margin: 5px 0px 10px 0px;
+}
+
+h1 { font: bold 38px Kreon, Arial, Sans-Serif; letter-spacing: -1px; padding: 14px; color: #333; text-shadow: 1px 1px 1px white; }
+
+nav ul { 
+    list-style: none; background: #184b62; padding: 10px 20px; position: relative; 
+}
+nav ul li { display: inline; text-align:justify;}
+nav ul li a {
+	display: block;
+	float: left;
+	border-top: 1px solid #96d1f8;
+	background: #3e779d;
+	background: -webkit-gradient(linear, left top, left bottom, from(#65a9d7), to(#3e779d));
+	background: -moz-linear-gradient(top,  #65a9d7,  #3e779d);
+	height: 18px;
+	padding: 3px 17px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+	-webkit-box-shadow: rgba(0,0,0,1) 0 1px 3px;
+	-moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+	text-shadow: rgba(0,0,0,.4) 0 1px 0;
+	-webkit-text-stroke: 1px transparent;
+	font: bold 19px/14px Kreon, "Lucida Grande", sans-serif;
+	color: rgba(255,255,255,.9);
+	text-decoration: none; 
+	margin: 0 5px 0 0;
+}
+nav ul li a:hover {
+	border-top: 1px solid #4789b4;
+	background: #28597a;
+	background: -webkit-gradient(linear, left top, left bottom, from(#3d789f), to(#28597a));
+	background: -moz-linear-gradient(top,  #3d789f,  #28597a);
+	color: rgba(255,255,255,.85); 
+}	
+nav ul li a:active, nav ul li a.current {
+	border-top-color: #245779;
+	background: #193441;
+	position: relative;
+	top: 1px; 
+}
+
+footer { color: #AAAAAA; margin: 0 auto; width: 600px; }
