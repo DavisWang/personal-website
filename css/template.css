@@ -61,5 +61,10 @@ div#gallery {
 }
 
 a {
-	color: #5bc0de;
+/*	color: #5bc0de; */
+}
+
+img {
+	width: 75px;
+	height: 75px;
 }

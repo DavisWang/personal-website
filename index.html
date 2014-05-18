@@ -5,7 +5,6 @@
     <title>Davis Wang</title>
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="css/cover.css" rel="stylesheet" type="text/css">
-    <link href="css/metrize.css" rel="stylesheet">
     <link href="css/template.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Kreon:300, 400" rel=
     "stylesheet" type="text/css">
@@ -15,22 +14,31 @@
     <nav class="navbar navbar-default navbar-inverse">
         <div class="container fluid">
             <div class="navbar-header">
-                <button class="navbar-toggle" data-target="#navbar"
-                data-toggle="collapse" type="button"><span class=
-                "sr-only">Toggle navigation</span></button><a class=
-                "navbar-brand" href="/">Davis Wang</a>
+                <button class="navbar-toggle" data-target="#navbar" data-toggle="collapse" type="button">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Davis Wang</a>
             </div>
 
             <div class="collapse navbar-collapse" id="navbar">
                 <ul class="nav navbar-nav">
-                    <li><a href="#" id="nav-about">About Me</a></li>
+                    <li><a href="#" id="nav-about" class="scroll">About Me</a></li>
 
-                    <li><a href="#" id="nav-projects">Projects and
+                    <li><a href="#" id="nav-projects" class="scroll">Projects and
                     Interests</a></li>
 
-                    <li><a href="#" id="nav-experience">Experience</a></li>
+                    <li><a href="#" id="nav-experience" class="scroll">Experience</a></li>
 
-                    <li><a href="#" id="nav-contact">Contact</a></li>
+                    <li class="dropdown">
+                        <a href="#" id="nav-contact" class="dropdown-toggle" data-toggle="dropdown">Contact<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="mailto:davis@daviswang.com">Email</a></li>
+                            <li><a href="http://www.linkedin.com/in/davisxwang/" target="_blank">Linkedin</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -180,13 +188,21 @@
                             Minted</p>
 
                             <div>
-                                Worked on the Fulfillment team
+                                Worked on the Fulfillment team, ensure orders from customers are properly processed
                             </div>
 
                             <div>
-                                Developed tools for Minted's designers to speed
-                                up their workflow and increase their efficiency
+                                Worked with a PM to develop a series of internal tools to speed up designer workflow and provide dashboard and analytic tools for design leads using Python, Mako, SQLAlchemy, and Twitter Bootstrap
                             </div>
+
+                            <div>
+				Developed a tool to automate and persist the data of running code coverage tools for the Minted codebase
+                            </div>
+
+                            <div>
+				Address on call production issues, and hot patch production servers with fixes
+                            </div>
+
                         </div>
 
                         <div class="work col-xs-6">
@@ -253,30 +269,6 @@
                     </div>
                 </div>
             </div>
-            <hr>
-
-            <div id="contact">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <h1>Contact Me</h1>
-                    </div>
-
-                    <p>Feel free to contact me with any comments, feedback or
-                    suggestions. I'm happy to answer any questions you may have
-                    for me, I look forward to hearing from you!</p>
-                </div>
-
-                <div class="row">
-                    <div class="col-xs-12">
-                        <a style="font-size: 36px;"href="mailto:davis@daviswang.com">@</a>
-                    </div>
-
-<!--                     <div class="col-xs-6">
-                        <a href="http://www.linkedin.com/in/davisxwang/"></a>
-                    </div> -->
-                </div>
-            </div>
-
             <footer>
                 <div>
                     Davis Wang 2014
@@ -299,7 +291,7 @@ var _gaq = _gaq || [];
     </script><script>
 $('#gallery').galleria();
 
-    $("ul.navbar-nav li a").click(function() {
+    $("ul.navbar-nav li a.scroll").click(function() {
     $('html, body').animate({
     scrollTop: $("#" + $(this).attr("id").substring(4)).offset().top
     }, 500);
