@@ -9,7 +9,7 @@ export const siteContent = {
   hero: {
     name: "Davis Wang",
     summary:
-      "10+ years across fintech, ads, search, marketplaces, and payments, with experience spanning 0→1 launches, conversion, monetization, growth systems, and CPN within Circle Payments.",
+      "Technical product leader with 10+ years driving 0→1 launches, growth, and monetization across fintech, ads, search, and marketplace products. Proven ability to drive $xxMM incremental value for the business.",
     ctaLabel: "Contact me"
   },
   contact: {
@@ -17,46 +17,23 @@ export const siteContent = {
     linkedIn: "https://www.linkedin.com/in/davisxwang/",
     website: "https://daviswang.com"
   },
-  snapshot: [
-    {
-      label: "Current role",
-      value: "Product Manager, Circle Payments",
-      note: "Focused on CPN within Circle Payments."
-    },
-    {
-      label: "Background",
-      value: "10+ years across fintech, ads, search, and marketplace products",
-      note: "Experience across 0→1 launches, growth, and monetization."
-    },
-    {
-      label: "Core areas",
-      value: "Growth, monetization, data analytics, and experimentation",
-      note: "Also includes 0→1, 1→10, and 10→100 product work."
-    },
-    {
-      label: "Leadership",
-      value: "Stakeholder alignment and cross-functional execution",
-      note: "Built across product, growth, and platform surfaces."
-    }
-  ],
   experience: [
     {
       id: "circle",
       company: "Circle",
-      title: "Product Manager, Circle Payments",
+      title: "Principal Product Manager",
       dates: "Current",
       location: "Remote / San Francisco Bay Area",
       logo: {
-        src: "https://cdn.prod.website-files.com/67116d0daddc92483c812e88/67116d0daddc92483c813396_onecolor-logo-licorice.svg",
-        alt: "Circle logo"
+        src: "https://cdn.prod.website-files.com/67116d0daddc92483c812e88/67116d0daddc92483c813397_primary-logo.svg",
+        alt: "Circle logo",
+        variant: "circle"
       },
-      summary: "Current work is focused on CPN within Circle Payments.",
-      impacts: [
-        "Focused on the CPN product area within Circle Payments."
-      ],
+      summary: "Building Circle Payments Network.",
+      impacts: [],
       tags: [
         "Payments & monetization",
-        "Growth systems",
+        "Growth",
         "Product strategy",
         "Cross-functional execution"
       ]
@@ -86,7 +63,7 @@ export const siteContent = {
       ],
       tags: [
         "Payments & monetization",
-        "Growth systems",
+        "Growth",
         "0→1 product builds",
         "Search & relevance"
       ]
@@ -123,7 +100,7 @@ export const siteContent = {
       tags: [
         "Monetization",
         "0→1 product builds",
-        "Growth systems",
+        "Growth",
         "Marketplace platforms"
       ]
     },
@@ -145,7 +122,7 @@ export const siteContent = {
       tags: [
         "Search & relevance",
         "Marketplace platforms",
-        "Growth systems"
+        "Growth"
       ]
     },
     {
@@ -205,10 +182,18 @@ export const siteContent = {
   ],
   education: [
     {
+      logo: {
+        src: "https://commons.wikimedia.org/wiki/Special:FilePath/University%20of%20Waterloo%20wordmark.svg",
+        alt: "University of Waterloo logo"
+      },
       school: "University of Waterloo",
       degree: "Bachelor of Computer Science"
     },
     {
+      logo: {
+        src: "https://commons.wikimedia.org/wiki/Special:FilePath/Laurier%20univ%20textlogo.png",
+        alt: "Wilfrid Laurier University logo"
+      },
       school: "Wilfrid Laurier University",
       degree: "Bachelor of Business Administration"
     }

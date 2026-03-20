@@ -31,25 +31,6 @@ function renderMain(content) {
       </div>
     </section>
 
-    <section class="snapshot section" aria-labelledby="snapshot-title">
-      <div class="section-heading reveal">
-        <p class="section-kicker" id="snapshot-title">Snapshot</p>
-      </div>
-      <div class="snapshot-grid">
-        ${content.snapshot
-          .map(
-            (item) => `
-              <article class="snapshot-card reveal">
-                <p class="snapshot-label">${item.label}</p>
-                <h3>${item.value}</h3>
-                <p>${item.note}</p>
-              </article>
-            `
-          )
-          .join("")}
-      </div>
-    </section>
-
     <section class="experience section" id="experience" data-nav-section>
       <div class="section-heading reveal">
         <p class="section-kicker">Experience</p>
@@ -66,7 +47,12 @@ function renderMain(content) {
                       role.logo
                         ? `
                           <span class="experience-logo-shell" aria-hidden="true">
-                            <img class="experience-logo" src="${role.logo.src}" alt="${role.logo.alt}" loading="lazy" />
+                            <img
+                              class="experience-logo ${role.logo.variant ? `experience-logo-${role.logo.variant}` : ""}"
+                              src="${role.logo.src}"
+                              alt="${role.logo.alt}"
+                              loading="lazy"
+                            />
                           </span>
                         `
                         : ""
@@ -80,17 +66,21 @@ function renderMain(content) {
                 </summary>
                 <div class="experience-panel">
                   <p class="experience-summary">${role.summary}</p>
-                  <ul class="impact-list">
-                    ${role.impacts
-                      .map((impact) => {
-                        if (typeof impact === "string") {
-                          return `<li>${impact}</li>`;
-                        }
+                  ${role.impacts.length
+                    ? `
+                      <ul class="impact-list">
+                        ${role.impacts
+                          .map((impact) => {
+                            if (typeof impact === "string") {
+                              return `<li>${impact}</li>`;
+                            }
 
-                        return `<li>${impact.prefix}<a href="${impact.href}" target="_blank" rel="noreferrer">${impact.label}</a>${impact.suffix}</li>`;
-                      })
-                      .join("")}
-                  </ul>
+                            return `<li>${impact.prefix}<a href="${impact.href}" target="_blank" rel="noreferrer">${impact.label}</a>${impact.suffix}</li>`;
+                          })
+                          .join("")}
+                      </ul>
+                    `
+                    : ""}
                   <div class="tag-row">
                     ${role.tags.map((tag) => `<span class="tag">${tag}</span>`).join("")}
                   </div>
@@ -111,6 +101,15 @@ function renderMain(content) {
           .map(
             (item) => `
               <article class="education-card reveal">
+                ${
+                  item.logo
+                    ? `
+                      <span class="education-logo-shell" aria-hidden="true">
+                        <img class="education-logo" src="${item.logo.src}" alt="${item.logo.alt}" loading="lazy" />
+                      </span>
+                    `
+                    : ""
+                }
                 <h3>${item.school}</h3>
                 <p>${item.degree}</p>
               </article>
@@ -174,7 +173,7 @@ function syncJsonLd(content) {
       "@type": "Person",
       name: content.hero.name,
       url: content.contact.website,
-      jobTitle: "Product Manager, Circle Payments",
+      jobTitle: "Principal Product Manager",
       email: `mailto:${content.contact.email}`,
       sameAs: [content.contact.linkedIn],
       alumniOf: content.education.map((item) => ({

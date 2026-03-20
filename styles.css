@@ -103,7 +103,6 @@ select {
 }
 
 .hero,
-.snapshot-card,
 .experience-item,
 .education-card,
 .contact-section {
@@ -138,8 +137,7 @@ select {
 }
 
 .eyebrow,
-.section-kicker,
-.snapshot-label {
+.section-kicker {
   margin: 0 0 0.6rem;
   color: var(--text-soft);
   font-size: 0.78rem;
@@ -224,32 +222,9 @@ select {
 
 .contact-copy,
 .education-card p,
-.snapshot-card p,
 .experience-summary,
 .impact-list {
   color: var(--text-muted);
-}
-
-.snapshot {
-  border-radius: var(--radius-xl);
-}
-
-.snapshot-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 1rem;
-}
-
-.snapshot-card {
-  min-height: 15rem;
-  padding: 1.2rem;
-  border-radius: var(--radius-lg);
-}
-
-.snapshot-card h3 {
-  margin: 0 0 0.7rem;
-  font-size: 1.55rem;
-  line-height: 1.15;
 }
 
 .experience-list {
@@ -324,6 +299,11 @@ select {
   opacity: 0.9;
 }
 
+.experience-logo-circle {
+  max-width: 7.7rem;
+  max-height: 2.2rem;
+}
+
 .experience-title {
   font-size: 1.15rem;
   font-weight: 600;
@@ -385,8 +365,34 @@ select {
 }
 
 .education-card {
+  display: grid;
+  gap: 0.7rem;
   padding: 1.2rem;
   border-radius: var(--radius-lg);
+}
+
+.education-logo-shell {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  min-width: 6rem;
+  height: 2.75rem;
+  padding: 0.5rem 0.85rem;
+  border: 1px solid rgba(53, 46, 37, 0.1);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.education-logo {
+  display: block;
+  max-width: 5.5rem;
+  max-height: 1.35rem;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(1);
+  opacity: 0.9;
 }
 
 .education-card h3 {
@@ -421,7 +427,6 @@ select {
 }
 
 @media (max-width: 980px) {
-  .snapshot-grid,
   .education-list {
     grid-template-columns: 1fr 1fr;
   }
@@ -458,13 +463,8 @@ select {
     max-width: none;
   }
 
-  .snapshot-grid,
   .education-list {
     grid-template-columns: 1fr;
-  }
-
-  .snapshot-card {
-    min-height: auto;
   }
 }
 
