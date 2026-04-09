@@ -1,3 +1,5 @@
+import { pwnerStudiosLogoSvg } from "./pwner-studios-logo-inline.js";
+
 export const siteContent = {
   seo: {
     title: "Davis Wang | Product Leader in Payments, Growth, and Monetization",
@@ -178,6 +180,19 @@ export const siteContent = {
         "Technical Systems Analyst, RBC Capital Markets"
       ],
       tags: ["Product strategy", "Analytics & experimentation", "Internal tooling"]
+    }
+  ],
+  personalProjects: [
+    {
+      title: "Pwner Studios",
+      description:
+        "A retro browser-game portfolio inspired by late 90s/early 2000s games.",
+      href: "https://daviswang.github.io/pwner-studios/",
+      github: "https://github.com/DavisWang/pwner-studios",
+      logo: {
+        inlineSvg: pwnerStudiosLogoSvg,
+        alt: "Pwner Studios logo"
+      }
     }
   ],
   education: [

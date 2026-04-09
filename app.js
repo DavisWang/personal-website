@@ -92,6 +92,41 @@ function renderMain(content) {
       </div>
     </section>
 
+    <section class="personal-projects section" id="personal-projects" data-nav-section>
+      <div class="section-heading reveal">
+        <p class="section-kicker">Personal projects</p>
+      </div>
+      <div class="personal-projects-list">
+        ${content.personalProjects
+          .map(
+            (project) => `
+              <article class="project-card reveal">
+                ${
+                  project.logo
+                    ? `
+                      <span class="project-logo-shell">
+                        ${
+                          project.logo.inlineSvg
+                            ? `<span class="project-logo-inline">${project.logo.inlineSvg}</span>`
+                            : `<img class="project-logo" src="${project.logo.src}" alt="${project.logo.alt}" loading="lazy" />`
+                        }
+                      </span>
+                    `
+                    : ""
+                }
+                ${project.logo ? "" : `<h3>${project.title}</h3>`}
+                <p class="project-card-copy">${project.description}</p>
+                <div class="hero-actions project-card-actions">
+                  <a class="button button-primary" href="${project.href}" target="_blank" rel="noreferrer">Visit site</a>
+                  <a class="button button-secondary" href="${project.github}" target="_blank" rel="noreferrer">View on GitHub</a>
+                </div>
+              </article>
+            `
+          )
+          .join("")}
+      </div>
+    </section>
+
     <section class="education section" id="education" data-nav-section>
       <div class="section-heading reveal">
         <p class="section-kicker">Education</p>
