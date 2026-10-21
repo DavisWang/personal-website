@@ -1,4 +1,5 @@
 import { pwnerStudiosLogoSvg } from "./pwner-studios-logo-inline.js";
+import { looproomLogoSvg } from "./looproom-logo-inline.js";
 
 export const siteContent = {
   seo: {
@@ -192,6 +193,19 @@ export const siteContent = {
       logo: {
         inlineSvg: pwnerStudiosLogoSvg,
         alt: "Pwner Studios logo"
+      }
+    },
+    {
+      title: "Looproom",
+      description:
+        "A browser-based backing band for practice and songwriting. Pick a key, progression, rhythm, and sounds, then play along.",
+      href: "https://daviswang.github.io/looproom/",
+      github: "https://github.com/DavisWang/looproom",
+      logo: {
+        inlineSvg: looproomLogoSvg,
+        alt: "Looproom logo",
+        variant: "looproom",
+        showTitle: true
       }
     }
   ],

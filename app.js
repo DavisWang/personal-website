@@ -104,17 +104,18 @@ function renderMain(content) {
                 ${
                   project.logo
                     ? `
-                      <span class="project-logo-shell">
+                      <div class="project-logo-shell ${project.logo.showTitle ? "project-logo-shell-with-title" : ""}">
                         ${
                           project.logo.inlineSvg
-                            ? `<span class="project-logo-inline">${project.logo.inlineSvg}</span>`
-                            : `<img class="project-logo" src="${project.logo.src}" alt="${project.logo.alt}" loading="lazy" />`
+                            ? `<span class="project-logo-inline ${project.logo.variant ? `project-logo-inline-${project.logo.variant}` : ""}">${project.logo.inlineSvg}</span>`
+                            : `<img class="project-logo ${project.logo.variant ? `project-logo-${project.logo.variant}` : ""}" src="${project.logo.src}" alt="${project.logo.alt}" loading="lazy" />`
                         }
-                      </span>
+                        ${project.logo.showTitle ? `<h3>${project.title}</h3>` : ""}
+                      </div>
                     `
                     : ""
                 }
-                ${project.logo ? "" : `<h3>${project.title}</h3>`}
+                ${!project.logo ? `<h3>${project.title}</h3>` : ""}
                 <p class="project-card-copy">${project.description}</p>
                 <div class="hero-actions project-card-actions">
                   <a class="button button-primary" href="${project.href}" target="_blank" rel="noreferrer">Visit site</a>
